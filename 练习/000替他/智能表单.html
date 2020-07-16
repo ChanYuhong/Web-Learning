@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>智能表单</title>
+</head>
+<style type="text/css">
+	*{
+		padding: 0;
+		margin:0;
+	}
+	form{
+		width: 500px;
+		height: 850px;
+		margin:20px auto;
+		background: #9DA71E;
+		padding: 20px;
+		border-radius: 15px;
+
+	}
+	section{
+		margin:10px;
+		padding-bottom: 10px;
+	}
+	.step {
+		font-size: 25px;
+		font-weight: 2px;
+		margin:10px 0;
+	}
+	.line-input{
+		background: #CAD38C;
+		margin-bottom: 5px;
+		border-radius: 5px;
+		border-width: 2px;
+		border-style: solid;
+		border-color: white;
+		padding: 5px 10px;
+	}
+	.line-input span{
+		text-align:top;
+		width: 150px;
+		display: inline-block;
+		vertical-align: top;
+	}
+	.line-input input,textarea{
+		width: 250px;
+		padding: 5px;
+		border-radius: 5px;
+		border-width: 2px;
+		border-style: solid;
+		border-color: white;
+
+	}
+	.line-input input.choice{
+		width: 30px;
+	}
+
+	.sb-bt{
+		border-radius:50px;
+		width: 120px;
+		height: 40px;
+		font-size: 25px;
+		margin:auto;
+		display: block;
+	}
+</style>
+<body>
+	<form action="">
+		<section>
+			<p class="step">Step1:Details</p>
+			<p class="line-input">
+				<span>Name</span>
+				<input type="text" placeholder="input your name">
+			</p>
+			<p class="line-input">
+				<span>Email</span>
+				<input type="Email">
+			</p>
+			<p class="line-input">
+				<span>Phone</span>
+				<input type="number">
+			</p>
+			<p class="line-input">
+				<span>Facebook</span>
+				<input type="text">
+			</p>
+		</section>
+		<section>
+			<p class="step">Step2:Delivery address</p>
+			<p class="line-input">
+				<span>Address</span>
+				<textarea name="" id="" cols="30" rows="10"></textarea>
+			</p>
+			<p class="line-input">
+				<span>Post code</span>
+				<input type="text">
+			</p>
+		</section>
+		<section>
+			<p class="step">Step3:Card details</p>
+			<p class="line-input">
+				<span>Card type</span>
+				<input type="radio" class="choice" name="cardType">debit
+				<input type="radio" class="choice" name="cardType">credit
+				<input type="radio" class="choice" name="cardType">VISA
+			</p>
+			<p class="line-input">
+				<span>Card number</span>
+				<input type="number">
+			</p>
+			<p class="line-input">
+				<span>Card pwd</span>
+				<input type="text">
+			</p>
+			<p class="line-input">
+				<span>Name on card</span>
+				<input type="text">
+			</p>
+		</section>
+		<p class="last-bt">
+			<input type="submit" class="sb-bt" value="SUBMIT">
+		</p>
+
+	</form>
+	
+</body>
+</html>
