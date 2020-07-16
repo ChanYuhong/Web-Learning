@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>定位</title>
+</head>
+<style type="text/css">
+	html{
+		margin: 0;
+		padding: 0;
+	}
+	#box{
+		width: 1127px;
+		height: 508px;
+		background: url(imgs/map.png);
+		margin: auto;
+		position: relative;
+	}
+	#box .p1{
+		left: 878px;
+		top: 211px;
+		position: absolute;
+		float: left;
+	}
+	#box .p1 .point{
+		width: 5px;
+		height: 5px;
+		background: blue;
+		float: left;
+	}
+	#box .p1 .info{
+		color: blue;
+		line-height: 5px;
+		float: left;
+	}
+</style>
+<body>
+	<div id="box">
+		<div class="p1">
+			<span class="point"></span>
+			<span class="info">CANTON,CHINA</span>
+		</div>
+	</div>
+</body>
+</html>
