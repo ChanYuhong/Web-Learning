@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chanyuhong</title>
+</head>
+<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	.box{
+		float: left;
+		margin: 100px 200px;
+		width: 300px;
+		height: 420px;
+		color: white;
+		overflow: hidden;
+		position: relative;
+	}
+	.box >img{
+		width: 300px;
+		height: 420px;
+	}
+	.box > *{
+		transition: 1s;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+	.box h1{
+		color: white;
+		width: 50px;
+		transform: translateX(10px) translateY(250px);
+	}
+	.box p{
+		color: white;
+	}
+	.box p:nth-of-type(1){
+		transform: translateY(140px) translateX(-150px);
+	}
+	.box p:nth-of-type(2){
+		transform: translateY(180px) translateX(-110px);
+		transition: 1s 0.1s;
+	}
+	.box p:nth-of-type(3){
+		transform: translateY(220px) translateX(-100px);
+		transition: 1s 0.2s;
+	}
+	.box:hover p:nth-of-type(1){
+		transform: translateY(140px) translateX(10px);
+	}
+	.box:hover p:nth-of-type(2){
+		transform: translateY(180px) translateX(10px);
+	}
+	.box:hover p:nth-of-type(3){
+		transform: translateY(220px) translateX(10px);
+	}
+	.box:hover img{
+		transform: scale(1.5) rotateZ(20deg);
+	}
+
+</style>
+<body>
+	<div class="box">
+		<img src="imgs/陈宇航生活照.jpg" alt="">
+		<h1>Chan Yuhong</h1>
+		<p class="p1">1998.08.13</p>
+		<p class="p2">173cm</p>
+		<p class="p3">62kg</p>
+	</div>
+	
+</body>
+</html>
