@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style>
+		
+		*{
+			padding: 0;margin: 0;
+		}
+		@media screen and (max-width:2000px) {
+			header{
+				width: 100%;
+				height: 60px;
+				background-color: #C4B29A;
+				position: fixed;
+				
+			}
+			header img{
+				width: 100px;
+				float: left;
+				margin-top: 10px;
+			}
+			header h1{
+				width: 150px;
+				float: left;
+				line-height: 60px;
+			}
+			header h3{
+				float: left;
+				line-height: 60px;
+				display: none;
+			}
+			header .menu  a{
+				float: right;
+				line-height: 60px;
+				margin-right: 30px;
+				display: block;
+				text-decoration: none;
+				color: #000000;
+			}
+			header .menu2{
+				display: none;
+			}
+			.banner{
+				width: 100%;
+				height: 500px;
+				background: url(banner.jpg) repeat fixed center;
+			}
+		} 
+		
+		@media screen and (max-width:700px) {
+			header{
+				width: 100%;
+				height: 60px;
+				background-color: #C4B29A;
+				
+			}
+			header img{
+				width: 100px;
+				float: left;
+				margin-top: 10px;
+			}
+			header h1{
+				width: 150px;
+				float: left;
+				line-height: 60px;
+			}
+			header h3{
+				width: 70px;
+				float: right;
+				line-height: 60px;
+				display:block;
+			}
+			header .menu  a{
+				line-height: 60px;
+				margin-right: 30px;
+				display:none;
+				text-decoration: none;
+				color: #000000;
+			}
+			header .menu2 a{
+				width: 100%;
+				heigth: 50px;
+				float: right;
+				line-height: 60px;
+				margin-right: 30px;
+				display: block;
+				text-decoration: none;
+				color: #000000;
+				
+			}
+			header h3:hover {
+				header{
+					height: 500px;	
+				}
+
+			}
+			header h3:hover nav a{
+				width: 100%;
+				height: 50px;
+				background-color:#76644C;
+				display: block;
+				text-align: center;
+			}
+		}
+		
+	</style>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<img src="../034过渡/imgs/18.jpg" >
+			<h1>猎豹公司</h1>
+			<div >
+				<h3>目录</h3>
+				<nav class="menu">
+					<a href="">文章</a>
+					<a href="">图片</a>
+					<a href="">视频</a>
+					<a href="">关于</a>
+				</nav>	
+			</div>
+			
+			<nav class="menu2">
+				<a href="">文章</a>
+				<a href="">图片</a>
+				<a href="">视频</a>
+				<a href="">关于</a>
+			</nav>
+		</header>
+		<div class="banner">
+			
+		</div>
+		<div class="content">
+			<nav>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</nav>
+		</div>
+		
+	</body>
+</html>
