@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var str1="abc123";
+			var num1=parseInt(str1);
+			if(num1==NaN){
+				alert(NaN);//NaN和任何内容不相等 包括它本身
+			}
+			else if(num1==123){
+				alert(123);
+			}
+			else if(typeof num1 =="number"){
+				alert("num");
+			}
+			else{
+				alert("str")
+			}
+		</script>
+	</body>
+</html>

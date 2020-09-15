@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function getAverage(){
+				var sum=0,len=arguments.length,i;
+				for(i=0;i<len;i++){
+					document.write(arguments[i]);
+					sum+=arguments[i];
+				}
+				alert("平均值是"+sum/len);
+			}
+			
+			getAverage(22,33,55,66,1);
+		</script>
+	</body>
+</html>
