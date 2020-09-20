@@ -1,0 +1,20 @@
+@charset "UTF-8";
+#div1 {
+  width: 100px;
+  height: 50px; }
+
+#div2 {
+  color: red; }
+  #div2 .box {
+    background-color: orange; }
+
+#div3 {
+  background-color: orange; }
+
+/* 
+    特殊变量
+    表达式/变量; 进行字符串拼接
+    类似于js中的ECMA6 ${};
+*/
+#div4 {
+  border-top: 1px solid black; }

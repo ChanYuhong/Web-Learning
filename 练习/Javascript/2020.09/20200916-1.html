@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//push,unshift,pop,shift
+			var color= new Array();
+			color=["blue","green","pink"];
+			var num=[2,4,55,36,78,2,-3];
+			document.write(color);
+			document.write(color.length)
+			var len1=color.push("black","yellow");
+			document.write(len1,color);
+			var len2=color.unshift("blown");
+			document.write(len2,color);
+			var m=color.pop();
+			document.write(m,color);
+			var n=color.shift();
+			document.write(n,color);
+			var a=color.join();
+			color.reverse();
+			console.log(a,color);
+			console.log(num.sort(function(a,b){return b-a}));
+			
+			var arr1=["a","b","c"],
+				arr2=[1,2,3],
+				arr3;
+			arr3=arr1.concat(arr2);
+			console.log(arr3);
+			arr4=arr3.slice(2,4);
+			console.log(arr4); 
+			//splice 删除 插入 替换
+			var arr5=[1,2,3,4,5,6];
+			console.log(arr5);
+			var mk=arr5.splice(1,1);
+			console.log(mk,arr5);
+			arr5.splice(3,0,5,5);
+			console.log(arr5);
+			arr5.splice(3,2,4,4);
+			console.log(arr5);
+			console.log(arr5.indexOf(6));
+		</script>
+	</body>
+</html>
