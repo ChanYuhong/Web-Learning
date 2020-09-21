@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- 问题 输入年、月、日，计算某一天是该年的第几天（周） -->
+    
+    <script>
+        var year=2020,month=9,day=20;
+        if(month==1){
+            alert("这是"+year+"年的第"+day+"天！");
+        }
+        else{
+            var days=day;
+            for(var i=1;i<month;i++){
+                switch (i) {
+                    case 1:
+                    case 3:
+                    case 5:
+                    case 7:
+                    case 8:
+                    case 10:
+                    case 12:
+                        days += 31;
+                        break;
+                    case 2:
+                        if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+                            days += 29;
+                        } else {
+                            days += 28;
+                        }
+                        break;
+                    default:
+                        days += 30;
+                        break;
+                }
+                    
+            }
+            alert("这是" + year + "年的第" + days + "天！");
+        }
+        
+    </script>
+</body>
+</html>
