@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr2=[33,44,5,6,99,54,32.5,7,9,2,3,56,61];
+        
+            var len= arr2.length;
+            var temp=0;
+            for(var i=0;i<len-1;i++){
+                for(var j=0;j<len-(1+i);j++){
+                    if(arr2[j]>arr2[j+1]){
+                        temp=arr2[j];
+                        arr2[j]=arr2[j+1];
+                        arr2[j+1]=temp;
+                        
+                    }
+                    document.write("第" + (i + 1) + "轮" + "第" + (j + 1) + "次" + arr2 + "<br>");
+                }
+            }
+            
+        
+        
+
+    </script>
+</body>
+</html>

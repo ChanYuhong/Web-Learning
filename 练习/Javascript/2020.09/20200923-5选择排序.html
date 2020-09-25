@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr=[9, 8, 7, 6, 5, 4];
+        var temp;
+        for(var i=0;i<arr.length-1;i++){
+            var count = 0;
+            for(var j=i+1;j<arr.length;j++){
+                
+                if(arr[i]>arr[j]){
+                    temp=arr[j];
+                    arr[j]=arr[i];
+                    arr[i]=temp;
+                    count++;
+                }
+            document.write("第" + (i + 1) + "轮" + "第" + count+ "次" + arr + "<br>");
+
+            }
+
+        }
+    </script>
+</body>
+</html>

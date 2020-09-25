@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 创建数组
+        var countries = new Array("china", "usa", "uk", 'japan');
+        document.write(countries + "<br/>");
+        // china, usa, uk, japan
+
+        //栈结构
+
+        /* push
+        功能：给数组的末尾添加元素。
+        格式：数组.push(参数1, 参数2…);
+        返回值：插完元素以后数组的长度。 */
+        document.write("push返回值：" + countries.push("korea", "russia") + " 原数组：" + countries + "<br/>")
+        // push返回值：6 原数组：china, usa, uk, japan, korea, russia
+
+        /* pop
+        功能：从数组末尾取下一个元素
+        格式：数组.pop()
+        参数：没有参数
+        返回值：取下一个元素 */
+        document.write("pop返回值：" + countries.pop() + " 原数组：" + countries + "<br/>")
+        // pop返回值：russia 原数组：china, usa, uk, japan, korea
+
+
+        //队列
+
+        // push
+        /* shift
+        功能：从数组的头部取下一个元素
+        格式：数组.shift()
+        参数：没有参数
+        返回值：取下的元素 */
+        document.write("shift返回值：" + countries.shift() + " 原数组：" + countries + "<br/>")
+        // shift返回值：china 原数组：usa, uk, japan, korea
+
+        /*  unshift
+         功能：从数组的头部插入元素
+         格式：数组.unshift(参数1, 参数2…)
+         返回值：插完元素以后数组的长度。 */
+        document.write("unshift返回值：" + countries.unshift("thailand") + " 原数组：" + countries + "<br/>")
+        // unshift返回值：5 原数组：thailand, usa, uk, japan, korea
+
+
+        // 1.concat() 方法可以基于当前数组创建一个新数组。
+        var co = [1, 2, 3]
+        document.write("concat返回值：" + countries.concat() + " 原数组：" + countries + "<br/>")
+        // concat返回值：thailand, usa, uk, japan, korea 原数组：thailand, usa, uk, japan, korea
+
+        document.write("concat返回值：" + countries.concat(co) + " 原数组：" + countries + "<br/>")
+        // concat返回值：thailand, usa, uk, japan, korea, 1, 2, 3 原数组：thailand, usa, uk, japan, korea
+
+        // 2.slice() 方法可以基于当前数组获取指定区域元素[start, end)
+        document.write("slice返回值：" + countries.slice(0, 2) + " 原数组：" + countries + "<br/>")
+        // slice返回值：thailand, usa 原数组：thailand, usa, uk, japan, korea
+
+        // 3.splice() 方法由于其参数的特殊性，可以完成 增、删、改三个功能
+
+        document.write("splice返回值：" + countries.splice(1, 0, "india") + " 原数组：" + countries + "<br/>")
+        // splice返回值： 原数组：thailand, india, usa, uk, japan, korea
+        document.write("splice返回值：" + countries.splice(1, 2) + " 原数组：" + countries + "<br/>")
+        // splice返回值：india, usa 原数组：thailand, uk, japan, korea
+        document.write("solice返回值：" + countries.splice(0, 1, "poland") + " 原数组：" + countries + "<br/>")
+        // solice返回值：thailand 原数组：poland, uk, japan, korea
+
+        // 4.join() 方法用数组元素组成字符串。
+        document.write("join返回值：" + countries.join("-") + " 原数组：" + countries + "<br/>")
+        // join返回值：poland - uk - japan - korea 原数组：poland, uk, japan, korea
+
+        // 5.reverse() 逆向排序
+        document.write("reverse返回值：" + co.reverse() + " 原数组：" + co + "<br/>")
+        // reverse返回值：3, 2, 1 原数组：3, 2, 1
+
+        // 6.sort() 从小到大排序，字符串排序
+        document.write("sort返回值：" + co.sort() + " 原数组：" + co + "<br/>")
+        // sort返回值：1, 2, 3 原数组：1, 2, 3
+        document.write("sort返回值：" + co.sort(function (value1, value2) { return value1 - value2 }) + " 原数组：" + co + "<br/>")
+        // sort返回值：1, 2, 3 原数组：1, 2, 3
+        document.write("sort返回值：" + co.sort(function (value1, value2) { return value2 - value1 }) + " 原数组：" + co + "<br/>")
+        // sort返回值：3, 2, 1 原数组：3, 2, 1
+     
+    
+    
+    
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+    // 1.    已知有两个字符串str1 = ‘hello’ str2 = ‘world’,将两个拼接
+    /* var str1 = "hello",str2 = "world";
+    var str3=str1+str2;
+    document.write(str3);   */      
+
+    // 2.    已知字符串str = “I love BeiJing”,找出love的范围
+    /* var str="I love Canton";
+    var str1="love";
+    document.write(str.indexOf(str1)+"~"+(str.indexOf(str1)+str1.length)); */
+    // 3.    已知字符串 str = “I  hate BeiJing!”,提取第3个字符到第5个字符
+  /*   var str = "I love Canton";
+    var str1 = "love";
+    document.write(str.substr(2,4)+"<br/>");
+    document.write(str.substring(2, 6) + "<br/>");
+    document.write(str.slice(2, 6) + "<br/>"); */
+
+    // 4.    将字符串str = “When I was young, I love a girl in neighbor class.”中,从young提取到girl生成新字符串。但是不许数
+    /* var str = "When I was young, I love a girl in neighbor class.";
+    cut("young","girl",str);
+    function cut(str1,str2,str) {
+        document.write(str.slice(str.indexOf(str1),(str.indexOf(str2)+str2.length)));
+    }  */
+
+    /*
+                      1.将字符中单词用空格隔开
+                    已知传入的字符串中只有字母,每个单词的首字母大写，请将每个
+            单词用空格隔开，只保留一个单词的首字母大写
+                    传入:”HelloMyWorld”
+                    返回:”Hello my world”
+    
+                【思路】
+                    1、字符串转成数组   split("")
+                    2、数组转成字符串   join("")
+                */
+               var str="HelloMyWorld";
+               var arr=str.split("");
+               for(var i=1;i<arr.length;i++){
+                   if(arr[i]>="A"&&arr[i]<="Z"){
+                       arr[i]=arr[i].toLowerCase();
+                       arr.splice(i,0," ");
+                   }
+               } 
+               
+               document.write(str = arr.join(""));
+
+    </script> 
+</body>
+</html>
