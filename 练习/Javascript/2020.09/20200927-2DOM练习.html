@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div1{width: 300px;height:150px;text-align: center;margin:100px auto;font-size: 20px;line-height: 150px;border: 2px solid;}
+    </style>
+    <script src="tool.js"></script>
+    <script>
+        window.onload =function(){
+            var node=document.getElementById("div1");
+            var count=0;
+            var change=5;
+
+            function randomColor(){
+                return "rgb("+parseInt(Math.random()*256)+"," + parseInt(Math.random() * 256) + "," + parseInt(Math.random() * 256) + ","+1+")";
+            }
+            alert(randomColor());
+            setInterval(function(){
+                node.style.color=randomColor();
+                var size=parseInt(getStyle(node,"fontSize"));
+                node.style.fontSize=size+change+"px";
+                count++;
+                if(count%6==0){
+                    change*=-1;
+                }
+            },1000)
+            
+        }
+    </script>
+</head>
+<body>
+    <div id="div1">变化练习</div>
+</body>
+</html>

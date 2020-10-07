@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div1{width: 200px; height: 200px; background-color: lightblue; border: 1px solid black; text-align: center; padding: 50px; margin: 100px auto}
+        #div1 input{width: 200px; height: 30px; font-size: 18px; margin-top: 10px}
+        #div1 span{font-size: 14px; color: red}
+    </style>
+    <script>
+        function func() {
+            var oUsername =document.getElementById("username");
+            var oPassword = document.getElementById("password");
+            var spText= document.getElementById("sp");
+            var usernameText=oUsername.value;
+             
+            for(var i=0;i<usernameText.length;i++){
+                if(!isWordnNum(usernameText[i])){
+                    spText.innerHTML="用户名不可用！";
+                    break;
+                }
+                spText.innerHTML = "用户名可用！";
+            }
+        }
+        function isWordnNum(text) {
+            if(text>=0&&text<=9||text>="A"&&text<="Z"||text>="a"&&text<="z"){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="div1">
+        <input id="username" type="text" placeholder="请输入用户名" onblur="func();">
+        <span id="sp">用户名可用大小写字母和数字</span>
+        <input id="password" type="text" placeholder="请输入密码">
+    </div>
+</body>
+</html>

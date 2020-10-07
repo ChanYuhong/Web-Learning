@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        a='I knew, {{equipmenClass name}}.YOU konew ,{{xxx}}.WE knew,{{sss}}.';
+
+        function transformFunc(a) {
+                var arr = a.split("");
+                var pos1=0,pos2=0;
+                
+                
+                    /* while((a.indexOf("{{", pos1))!=-1){
+                        pos1 = a.indexOf("{{", pos1);
+                        pos2 = a.indexOf("}}", pos1) + 1;
+                        arr.splice(pos1, pos2 - pos1 + 1, "equipmentClassName");
+                    }
+                     */
+                
+                
+                    
+                   
+                    
+            
+                   
+                
+                
+                
+                
+                // document.write(arr.join(""));
+                document.write(a.indexOf("{{", pos1)) != -1);
+            }
+        
+        transformFunc(a);
+        // document.write(a);
+    </script>
+</body>
+</html>

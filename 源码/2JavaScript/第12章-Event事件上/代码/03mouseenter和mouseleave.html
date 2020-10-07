@@ -26,13 +26,13 @@
                 var aDivs = document.getElementsByTagName("div");
 
                 var i = 0;
-                aDivs[0].onmouseout = function(){
+                aDivs[0].onmouseover = function(){
                     var oSpan = this.getElementsByTagName("span")[0];
                     oSpan.innerHTML = i++;
                 }
 
                 var j = 0;
-                aDivs[1].onmouseleave = function(){
+                aDivs[1].onmouseenter = function(){
                     var oSpan = this.getElementsByTagName("span")[0];
                     oSpan.innerHTML = j++;
                 }

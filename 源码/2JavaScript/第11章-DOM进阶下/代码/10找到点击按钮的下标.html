@@ -16,8 +16,9 @@
                     点击按钮，输出当前按钮的下标
                 */
                 for(var i = 0; i < aBtns.length; i++){
+                    aBtns[i].index=i;
                     aBtns[i].onclick = function(){
-                        alert(i);
+                        alert(this.index);
                     }
                 }
 

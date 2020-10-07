@@ -41,11 +41,8 @@
                 //封装跨浏览器兼容的阻止事件冒泡
                 function stopBubble(e){
                     //e 是事件对象
-                    if(e.stopPropagation){
-                        e.stopPropagation();
-                    }else{
-                        e.cancelBubble = true;
-                    }
+                    e.stopPropagation?e.stopPropagation():e.cancelBubble = true;
+                    
                 }
             }
         </script>

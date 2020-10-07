@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="cn" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;padding: 0;
+        }
+        #div1 {
+            margin:auto;
+            width: 450px;
+            height:800px;
+            padding: 30px;
+            background:#F7F7F7;
+        }
+        #div1 input {
+            width: 350px;
+            height: 50px;
+            background: #ECECEC;
+            margin: 20px 25px 0 25px;
+            border-radius: 30px;
+            border: none;
+            padding: 25px;
+            font-size: 20px;
+        }
+        #div1 button{
+            width: 90px;
+            height: 50px;
+            background: #FFC100;
+            margin: 20px 27px 0 27px;
+            border-radius: 10px;
+            border: none;
+            padding: auto;
+            font-size: 20px;
+        }
+        #div2 div {
+            width: 360px;
+            height: auto;
+            background: #FFFFFF;
+            margin: 15px 25px 0 25px;
+            border-radius: 10px;
+            border: none;
+            padding: 20px ;
+            font-size: 20px;
+            position: relative;
+        }
+        #div2 div button{
+            position: absolute;
+            bottom:5px;
+            right:5px;
+            margin:0px;
+            width: 20px;
+            height: 20px;
+            background:  #FFC100;
+            border-radius: 20px;
+            border: none;
+            font-size: 20px;
+            line-height: 20px;
+            text-align: center;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            var oDiv1 =document.getElementById("div1");
+            var oDiv2 = document.getElementById("div2");
+            var oBtns=oDiv1.getElementsByTagName("button");
+            var oText=document.getElementById("ipt");
+
+            oBtns[0].onclick = function(){
+                if (!oText.value) {
+                    alert("请输入内容！");
+                }
+                else{
+                    var newDiv = document.createElement("div");
+
+                    var newText = document.createTextNode(oText.value);
+                    newDiv.appendChild(newText);
+                    oDiv2.appendChild(newDiv);
+                    var newBtn = document.createElement("button");
+                    newBtn.innerHTML = '✖';
+                    newDiv.appendChild(newBtn);
+                    newBtn.onclick=function(){
+                        oDiv2.removeChild(this.parentNode);
+                    }
+                    oText.value = "";
+                }
+                
+            }
+            oBtns[1].onclick = function () {
+                var newNode = oDiv2.lastChild.cloneNode(true);
+                oDiv2.appendChild(newNode);
+                
+            }
+            oBtns[2].onclick = function () {
+
+                oDiv2.removeChild(oDiv2.lastChild);
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="div1">
+        <input id="ipt" cols="30" rows="10"></input>
+        
+            <button >发表</button>
+            <button >复制</button>
+            <button >删除</button>
+        
+        <div id="div2">
+            <!-- <button>x</button>我今天很开心你好我是陈宇航我今天很开心你好我是陈宇航我今天很开心我今天很开心你好我是陈宇航我今天很开心你好你好你好你好你好你好你 -->
+        </div>
+    </div>
+    
+</body>
+</html>

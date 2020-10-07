@@ -34,3 +34,23 @@ function selectSort(arr) {
     
 }
 
+function mixTestCode(n) {
+    var arr = [];
+    for (var i = 0; i < n; i++) {
+        var x = parseInt(Math.random() * 123);
+        if (x >= 0 && x < 10) {
+            arr.push(x);
+        }
+        else if (x >= 65 && x <= 90 || x >= 97 && x < 123) {
+            arr.push(String.fromCharCode(x));
+        }
+        else {
+            i--;
+        }
+    }
+    return arr.join("");
+}
+
+function getStyle(node, cssStyle) {
+    return node.currentStyle ? node.currentStyle[cssStyle] : getComputedStyle(node)[cssStyle];
+}
