@@ -11,10 +11,11 @@
     <script>
         window.onload=function(){
             var oDiv =document.getElementById("div1");
-            oDiv.onmousemove=function(ev){
+            document.onmousemove=function(ev){
                 var e=ev||window.event;
-                div1.style.left = e.clientX - 75 +"px";
-                div1.style.top = e.clientY -75+ "px";
+                
+                div1.style.left = e.clientX - 100 +"px";
+                div1.style.top = e.clientY -100  + "px";
             }
         }
     </script>

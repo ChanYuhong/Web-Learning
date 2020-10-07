@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        #div1 {
+            width: 100px;
+            height: 100px;
+            background: green;
+            position: absolute;
+            border: 3px solid black;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var oDiv = document.getElementById("div1");
+            oDiv.onmousedown = function (ev) {
+                var e = ev || window.event;
+                var offsetX = e.clientX - oDiv.offsetLeft;
+                var offsetY = e.clientY - oDiv.offsetTop;
+                document.onmousemove = function (ev) {
+                    var e = ev || window.event;
+                    var x = e.clientX - offsetX;
+                    var y = e.clientY - offsetY;
+
+                    if (x < 0) { x = 0 };
+                    var windowWidth = document.body.clientWidth || document.documentElement.clientWidth;
+                    if (x >= windowWidth - oDiv.offsetWidth) {
+                        x = windowWidth - oDiv.offsetWidth;
+                    }
+                    if (y < 0) { y = 0 };
+                    var windowHeight = document.body.clientHeight || document.documentElement.clientHeight;
+                    if (y >= windowHeight - oDiv.offsetHeight) {
+                        y = windowHeight - oDiv.offsetHeight;
+                    }
+                    oDiv.style.top = y+ "px";
+                    oDiv.style.left = x+ "px"; 
+                }
+            }
+            document.onmouseup = function () {
+                document.onmousemove = null;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="div1"></div>
+</body>
+
+</html>
